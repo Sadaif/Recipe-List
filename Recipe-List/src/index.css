@@ -1,0 +1,225 @@
+html {
+  background-image: url("recipe.jpg");
+  font-family: 'Roboto', sans-serif;
+  height: 100%; 
+  background-position: center;
+   background-repeat: repeat;
+   background-size: cover;
+}
+
+.recipe-page-title {
+  color: 	 #006666;
+  background:  #99ffff;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+#recipe-list {
+  font-size: 30px;
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #99ffff;
+  padding-bottom: 1em;
+  text-align: center;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+#recipe-list .recipe {
+  /* border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black; */
+  border-bottom: none;
+  text-align: left;
+  overflow: hidden;
+}
+/* #recipe-list .recipe:last-child {
+  border-bottom: 1px solid black;
+} */
+#recipe-list .recipe .recipe-title {
+  cursor: pointer;
+  padding: 0.4em;
+  color: #006666;
+  background-color: 	 #99ffff;
+}
+#recipe-list .recipe .recipe-title:hover {
+  background-color: 	 #99ffff;
+}
+#recipe-list .recipe .recipe-details {
+  background: whitesmoke;
+  position: relative;
+  overflow: hidden;
+  padding: 0.4em;
+  padding-left: 0.7em;
+  color: #2b2b2b;
+}
+#recipe-list .recipe .recipe-details .list-title {
+  font-size: 0.8em;
+}
+#recipe-list .recipe .recipe-details .list {
+  margin-top: 0.2em;
+}
+#recipe-list .recipe .recipe-details .list-item {
+  font-size: 0.7em;
+  line-height: 1.3em;
+}
+#recipe-list .recipe .recipe-details .details-button-row {
+  display: flex;
+  justify-content: center;
+}
+
+#app-container {
+  text-align: center;
+}
+#app-container .add-recipe-button {
+  margin-top: 30px;
+}
+
+.std-button {
+  border-radius: 5px;
+  padding: 7px 13px;
+  font-size: 19px;
+  margin: 18px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+.std-button.close-button, .std-button.close-modal {
+  background-color: #1689E0;
+  box-shadow: 0px 2px 0px 0px #116db2;
+}
+.std-button.close-button:hover, .std-button.close-modal:hover {
+  background-color: #2695ea;
+}
+.std-button.edit-button, .std-button.add-recipe-button, .std-button.modal-edit-recipe, .std-button.modal-add-recipe {
+  background-color: #29B765;
+  box-shadow: 0px 2px 0px 0px #208d4e;
+}
+.std-button.edit-button:hover, .std-button.add-recipe-button:hover, .std-button.modal-edit-recipe:hover, .std-button.modal-add-recipe:hover {
+  background-color: #2ecc70;
+}
+.std-button.delete-button {
+  background-color: #D62C1A;
+  box-shadow: 0px 2px 0px 0px #a92314;
+}
+.std-button.delete-button:hover {
+  background-color: #e53725;
+}
+.std-button:active {
+  transform: translate(0px, 2px);
+  -webkit-transform: translate(0px, 2px);
+  box-shadow: none;
+}
+
+.editor-textarea {
+  overflow: hidden;
+  border: 1px solid #333;
+  display: block;
+  padding: 10px;
+  border-radius: 0.45em;
+  resize: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px;
+}
+.backdrop .modal {
+  background: #fff;
+  border-radius: 0.75em;
+  max-width: 500px;
+  min-height: 250px;
+  margin: 0 auto;
+  padding: 30px;
+  -webkit-box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.backdrop .modal .editor-titlecard {
+  letter-spacing: 1px;
+}
+.backdrop .modal form textarea {
+  width: 95%;
+  height: 48px;
+}
+.backdrop .modal form input {
+  border: 1px solid #333;
+  border-radius: 0.45em;
+  padding: 10px;
+  width: 95%;
+  margin-bottom: 20px;
+}
+.backdrop .modal .editor-footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.fadeInDown-enter .modal {
+  opacity: 0.01;
+  top: 50px;
+}
+
+.fadeInDown-enter-active .modal {
+  opacity: 1;
+  top: 0px;
+  transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -webkit-transition: all 300ms ease-in;
+}
+
+.fadeInDown-leave .modal {
+  opacity: 1;
+  top: 0px;
+}
+
+.fadeInDown-leave-active .modal {
+  opacity: 0.01;
+  top: 50px;
+  transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -webkit-transition: all 300ms ease-in;
+}
+
+.slideDown-enter {
+  max-height: 0px;
+}
+
+.slideDown-enter-active {
+  max-height: 1200px;
+  transition: max-height 500ms ease-in;
+  -moz-transition: max-height 500ms ease-in;
+  -webkit-transition: max-height 500ms ease-in;
+}
+
+.slideDown-leave {
+  max-height: 1200px;
+}
+
+.slideDown-leave-active {
+  max-height: 0px;
+  transition: max-height 500ms ease-in;
+  -moz-transition: max-height 500ms ease-in;
+  -webkit-transition: max-height 500ms ease-in;
+}
